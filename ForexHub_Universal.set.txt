@@ -7,14 +7,15 @@ MaxSlippage=5
 EnableLogs=true
 ShowDashboard=true
 
-[News_Filters]
-blank112=
-NEWS_FILTER=true
-NEWS_IMPOTANCE_LOW=false
-NEWS_IMPOTANCE_MEDIUM=true
-NEWS_IMPOTANCE_HIGH=true
-STOP_BEFORE_NEWS=45
-START_AFTER_NEWS=45
-Currencies_Check=USD,EUR,GBP,JPY,CHF,CAD,AUD,NZD,XAU,XAG,BTC,ETH
-Check_Specific_News=true
-Specific_News_Text=employment,inflation,rate,regulation
+input string   blank_news       = "=== NEWS FILTERS ==="; // Separator
+input bool   NEWS_FILTER              = true;
+input int    STOP_BEFORE_NEWS         = 30;
+input int    START_AFTER_NEWS         = 30;
+input bool   NEWS_IMPOTANCE_HIGH      = true;
+input bool   NEWS_IMPOTANCE_MEDIUM    = true;
+input bool   NEWS_IMPOTANCE_LOW       = false;
+input string Currencies_Check         = "USD,GBP,EUR,AUD,CAD,JPY,NZD";
+input bool   Check_Specific_News      = true;
+input string Specific_News_Text       = "cpi,interest,nfp,rate,fomc,jobs";
+input int    REQUEST_DELAY_MINUTES    = 60;  // Match API update frequency (60 minutes)
+input bool   ENABLE_DEBUG_LOGS        = true;
